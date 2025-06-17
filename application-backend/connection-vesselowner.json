@@ -1,0 +1,48 @@
+{
+    "name": "fish-supply-network-vesselowner",
+    "version": "1.0.0",
+    "client": {
+        "organization": "VesselOwnerOrg",
+        "connection": {
+            "timeout": {
+                "peer": {
+                    "endorser": "300"
+                }
+            }
+        }
+    },
+    "organizations": {
+        "VesselOwnerOrg": {
+            "mspid": "VesselOwnerOrgMSP",
+            "peers": [
+                "peer0.vesselowner.fish-supply.com"
+            ],
+            "certificateAuthorities": [
+                "ca.vesselowner.fish-supply.com"
+            ]
+        }
+    },
+    "peers": {
+        "peer0.vesselowner.fish-supply.com": {
+            "url": "grpcs://localhost:7051",
+            "tlsCACerts": {
+                "path": "../fish-network/crypto-config/peerOrganizations/vesselowner.fish-supply.com/tlsca/tlsca.vesselowner.fish-supply.com-cert.pem"
+            },
+            "grpcOptions": {
+                "ssl-target-name-override": "peer0.vesselowner.fish-supply.com"
+            }
+        }
+    },
+    "certificateAuthorities": {
+        "ca.vesselowner.fish-supply.com": {
+            "url": "https://localhost:7054",
+            "caName": "ca-vesselowner",
+            "tlsCACerts": {
+                 "path": "../fish-network/crypto-config/peerOrganizations/vesselowner.fish-supply.com/ca/ca.vesselowner.fish-supply.com-cert.pem"
+            },
+            "httpOptions": {
+                "verify": false
+            }
+        }
+    }
+}
