@@ -35,7 +35,7 @@ async function getContract() {
       `An identity for the user "${identityLabel}" does not exist in the wallet. Registering...`
     );
     // We need to enroll the user. For a cryptogen network, we import the pre-generated materials.
-    // In a real app, you'd use fabric-ca-client to enroll a user registered with the CA.
+    
 
     // Get the MSP ID from the connection profile
     const orgMspId = ccp.organizations.VesselOwnerOrg.mspid;

@@ -58,7 +58,7 @@ class FishSupplyChainContract extends Contract {
 
     // UPDATED: Basic access control - check if the transaction submitter owns the vessel.
     // We'll use the ownerId string stored on the vessel for this simple check.
-    // A real app might use certificate attributes for more robust checks.
+    
     const submitterMspId = ctx.clientIdentity.getMSPID();
     const submitterId = ctx.clientIdentity.getID();
     console.log(`Submitter: ${submitterId}`);
