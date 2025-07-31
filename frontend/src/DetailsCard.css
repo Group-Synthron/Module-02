@@ -1,0 +1,79 @@
+.details-card {
+  background-color: #d0f6f8;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.details-card h3 {
+  margin-top: 0;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+  color: #333;
+}
+
+.details-card h4 {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 1.1em;
+}
+
+.details-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.details-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-list li:last-child {
+  border-bottom: none;
+}
+
+.details-list strong {
+  color: #333;
+  margin-right: 10px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.status-caught {
+  background-color: #007bff;
+}
+
+.status-in_process {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.status-wholesale {
+  background-color: #28a745;
+}
+
+.status-retail {
+  background-color: #17a2b8;
+}
+
+.status-unknown {
+  background-color: #6c757d;
+}

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import VesselDetailsCard from './VesselDetailsCard'; // Import the new component
+import './DetailsCard.css'; // Import the CSS
 
 function QueryVessel() {
   const [vesselId, setVesselId] = useState('');
@@ -11,7 +13,9 @@ function QueryVessel() {
     setQueryResult(null);
 
     try {
-      const response = await fetch(`http://localhost:3001/api/vessels/${vesselId}`);
+      const response = await fetch(
+        `http://localhost:3001/api/vessels/${vesselId}`
+      );
       const data = await response.json();
 
       if (!response.ok) {
@@ -41,10 +45,8 @@ function QueryVessel() {
       </form>
       {message && <p>{message}</p>}
       {queryResult && (
-        <div>
-          <h3>Vessel Details:</h3>
-          <pre>{JSON.stringify(queryResult, null, 2)}</pre>
-        </div>
+        // Replace the <pre> tag with the new card component
+        <VesselDetailsCard vessel={queryResult} />
       )}
     </div>
   );
